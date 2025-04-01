@@ -1,11 +1,11 @@
 # Model Configuration
-model_name: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+model_name: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
 model_from_pretrained_kwargs:
   center_writing_weights: false
   dtype: bfloat16
 
 # Dataset Configuration
-dataset_path: andreuka18/DeepSeek-R1-Distill-Llama-8B-lmsys-openthoughts-tokenized
+dataset_path: Gubrg/DeepSeek-R1-Distill-Qwen-1.5B-OpenThoughts-114k-tokenized
 is_dataset_tokenized: true  # deprecated
 prepend_bos: false
 streaming: false
@@ -63,3 +63,5 @@ n_checkpoints: 5
 checkpoint_path: sae_runs
 dtype: float32
 exclude_special_tokens: [128000, 128001]
+
+#WANDB_API_KEY="" python training/train_sae.py 'training/configs/r1-distill-llama-8b.yaml'
