@@ -42,6 +42,3 @@ RUN pip install sae_lens==5.5.2 sae-dashboard
 # Definir variável de ambiente para o Weights & Biases (WANDB)
 ARG WANDB_KEY
 ENV WANDB_API_KEY=$WANDB_KEY
-
-# Comando padrão para iniciar o treinamento
-CMD ["/bin/bash", "/app/extraction/scripts/compute_score.sh"]
