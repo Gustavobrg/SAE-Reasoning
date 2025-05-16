@@ -29,8 +29,8 @@ class Reasoner:
 
 
 def prepare_lmsys_dataset(
-    model_path: str = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
-    hf_user: str = "hf_user",
+    model_path: str = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    hf_user: str = "Gubrg",
     num_tokens: int = 800_000_000,
     context_size: int = 1024,
     hf_token: str | None = None,

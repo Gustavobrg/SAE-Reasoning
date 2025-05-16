@@ -13,8 +13,8 @@ streaming: false
 # SAE Configuration
 architecture: standard
 hook_name: blocks.19.hook_resid_post
-hook_layer: 19
-d_in: 4096
+hook_layer: 27
+d_in: 1536
 expansion_factor: 16
 mse_loss_normalization: null
 b_dec_init_method: zeros
@@ -26,8 +26,8 @@ init_encoder_as_decoder_transpose: true
 normalize_activations: expected_average_only_in
 
 # Training Parameters
-training_tokens: 819200000  # 200k steps
-train_batch_size_tokens: 4096
+training_tokens: 119200000  # 200k steps
+train_batch_size_tokens: 2024
 lr: !!float 5e-5
 adam_beta1: 0.9
 adam_beta2: 0.999
@@ -59,9 +59,9 @@ eval_every_n_wandb_logs: 20
 # MISC
 device: cuda
 seed: 42
-n_checkpoints: 5
+n_checkpoints: 10
 checkpoint_path: sae_runs
 dtype: float32
 exclude_special_tokens: [128000, 128001]
 
-#WANDB_API_KEY="" python training/train_sae.py 'training/configs/r1-distill-llama-8b.yaml'
+#WANDB_API_KEY="90feee2acfd35f9c95a5d42426444d6620ff2893" python training/train_sae.py 'training/configs/r1-distill-llama-8b.yaml'
