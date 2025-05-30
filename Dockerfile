@@ -36,7 +36,7 @@ COPY TransformerLens /app/TransformerLens
 RUN cd TransformerLens && pip install -e .
 
 # Instalar sae_lens e sae-dashboard
-
+RUN pip install "transformers==4.51.0" --force-reinstall
 RUN pip install sae_lens==5.5.2 sae-dashboard
 
 # Definir variável de ambiente para o Weights & Biases (WANDB)
