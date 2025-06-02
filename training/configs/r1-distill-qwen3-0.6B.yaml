@@ -27,15 +27,15 @@ normalize_activations: expected_average_only_in
 
 # Training Parameters
 training_tokens: 819200000  # 200k steps
-train_batch_size_tokens: 2024
+train_batch_size_tokens: 4096
 lr: !!float 5e-5
 adam_beta1: 0.9
 adam_beta2: 0.999
 lr_scheduler_name: constant
 lr_warm_up_steps: 0
-lr_decay_steps: 70000  # 20% of training (NOTE: This is measured in steps: 0.2 * training_tokens // train_batch_size_tokens)
+lr_decay_steps: 40000  # 20% of training (NOTE: This is measured in steps: 0.2 * training_tokens // train_batch_size_tokens)
 l1_coefficient: 5
-l1_warm_up_steps: 20000  # 5% of training (NOTE: This is measured in steps: 0.05 * training_tokens // train_batch_size_tokens)
+l1_warm_up_steps: 10000  # 5% of training (NOTE: This is measured in steps: 0.05 * training_tokens // train_batch_size_tokens)
 lp_norm: 1.0  # l1 penalty
 context_size: 1024
 
