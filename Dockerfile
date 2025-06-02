@@ -32,11 +32,9 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install -r requirements.txt
 
 COPY TransformerLens /app/TransformerLens
-# Instalar versão específica do TransformerLens
-RUN cd TransformerLens && pip install -e .
 
 # Instalar sae_lens e sae-dashboard
-RUN pip install --upgrade transformer-lens --force-reinstall
+RUN pip install --upgrade transformer-lens
 RUN pip install "transformers==4.51.0" --force-reinstall
 RUN pip install sae_lens==5.10.5 sae-dashboard
 
